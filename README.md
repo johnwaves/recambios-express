@@ -18,5 +18,6 @@ Por tanto, conociendo de antemano detalles sobre la tarificación de los combust
 ## Configuración de GitHub
 Para verificar la configuración del repositorio, pulsa [aquí](https://github.com/johnwaves/quickpath-taxi/blob/Objetivo-0/docs/git-config.png).
 
+## Más información
 **NOTA:** Conforme vaya avanzando la asignatura esta descripción se irá actualizando. Asimismo, apareceán nuevas secciones y detalles.
 
