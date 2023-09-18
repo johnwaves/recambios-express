@@ -9,9 +9,9 @@ Además de los altos precios de los combustibles, los taxistas se enfrentan a ge
 A continuación se muestran los aspectos clave que se deben abordar:
 - **Ruta óptima y eficiencia energética.** Los taxistas a menudo enfrentan el dilema de elegir la ruta más rápida y rentable para llevar a los pasajeros a su destino. Esto implica calcular la distancia más corta entre el punto de partida y el destino, teniendo en cuenta las condiciones de tráfico en tiempo real. Además, es esencial optimizar el consumo de combustible para garantizar que el viaje sea rentable para el taxista y amigable con el medio ambiente. 
 
-- **Cálculo preciso del precio.**: Determinar el precio justo por kilómetro para el cliente es primordial. Esto implica tener en cuenta el costo del combustible y la autonomía del vehículo para generar un precio que sea rentable para el taxista y atractivo para el pasajero.
+- **Cálculo preciso del precio.** Determinar el precio justo por kilómetro para el cliente es primordial. Esto implica tener en cuenta el costo del combustible y la autonomía del vehículo para generar un precio que sea rentable para el taxista y atractivo para el pasajero.
 
-- **Actualización en tiempo real.**: El tráfico en las ciudades es dinámico y puede cambiar en cuestión de minutos. Para proporcionar rutas óptimas y evitar atascos, es obligatorio el acceso en tiempo real a datos de tráfico, como congestiones, accidentes y obras en la vía, entre otros.
+- **Actualización en tiempo real.** El tráfico en las ciudades es dinámico y puede cambiar en cuestión de minutos. Para proporcionar rutas óptimas y evitar atascos, es obligatorio el acceso en tiempo real a datos de tráfico, como congestiones, accidentes y obras en la vía, entre otros.
 
 Por tanto, conociendo de antemano detalles sobre la tarificación de los combustibles y la autonomía de sus vehículos, los taxistas necesitan obtener las rutas directas y económicas que los pasajeros soliciten, así como actualizaciones en tiempo real del tráfico para poder asegurar y ofrecer un servicio ideal.
 
