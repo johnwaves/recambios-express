@@ -1,9 +1,9 @@
 # QuickPath Taxi
 
-## Introducción.
+## Introducción
 Es bien sabido que la eficiencia en los desplazamientos se ha convertido en una prioridad a nivel mundial. Los taxis, como parte de los medios de transporte en común de la actualidad, se enfrentan a desafíos que afectan tanto a su rentabilidad como a la satisfacción del cliente. Sin embargo, pese a toda la controversia que existe sobre su uso, sigue siendo un servicio demandado y abierto a mejoras.
 
-## Problema a resolver.
+## Problema a resolver
 Además de los altos precios de los combustibles, los taxistas se enfrentan a generar pérdidas si los trayectos que realizan no resultan lo suficientemente rentables como para cubrir los costes del funcionamiento y mantenimiento de los vehículos, aparte de no poder producir beneficio propio. Por ende, los clientes evitarían solicitar un servicio de taxi si no se garantiza una experiencia de viaje asegurando rutas eficientes y precios justos.
 
 A continuación se muestran los aspectos clave que se deben abordar:
