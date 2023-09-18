@@ -13,4 +13,10 @@ A continuación se muestran los aspectos clave que se deben abordar:
 
 - **Actualización en tiempo real.**: El tráfico en las ciudades es dinámico y puede cambiar en cuestión de minutos. Para proporcionar rutas óptimas y evitar atascos, es obligatorio el acceso en tiempo real a datos de tráfico, como congestiones, accidentes y obras en la vía, entre otros.
 
-Por tanto, conociendo de antemano detalles sobre la tarificación de los combustibles y la autonomía de sus vehículos, los taxistas necesitan obtener rutas directas y económicas que los pasajeros soliciten, así como actualizaciones en tiempo real del tráfico para poder asegurar dichas rutas y ofrecer un servicio ideal.
+Por tanto, conociendo de antemano detalles sobre la tarificación de los combustibles y la autonomía de sus vehículos, los taxistas necesitan obtener las rutas directas y económicas que los pasajeros soliciten, así como actualizaciones en tiempo real del tráfico para poder asegurar y ofrecer un servicio ideal.
+
+## Configuración de GitHub
+Para verificar la configuración del repositorio, pulsa [aquí](https://github.com/johnwaves/quickpath-taxi/tree/Objetivo-0/docs).
+
+**NOTA:** Conforme vaya avanzando la asignatura esta descripción se irá actualizando. Asimismo, apareceán nuevas secciones y detalles.
+
