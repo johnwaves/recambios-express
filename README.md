@@ -16,7 +16,7 @@ A continuación se muestran los aspectos clave que se deben abordar:
 Por tanto, conociendo de antemano detalles sobre la tarificación de los combustibles y la autonomía de sus vehículos, los taxistas necesitan obtener las rutas directas y económicas que los pasajeros soliciten, así como actualizaciones en tiempo real del tráfico para poder asegurar y ofrecer un servicio ideal.
 
 ## Configuración de GitHub
-Para verificar la configuración del repositorio, pulsa [aquí](https://github.com/johnwaves/quickpath-taxi/tree/Objetivo-0/docs).
+Para verificar la configuración del repositorio, pulsa [aquí](https://github.com/johnwaves/quickpath-taxi/blob/Objetivo-0/docs/git-config.png).
 
 **NOTA:** Conforme vaya avanzando la asignatura esta descripción se irá actualizando. Asimismo, apareceán nuevas secciones y detalles.
 
