@@ -1,7 +1,8 @@
-# Nombre aún por definir (Organizador de planes)
+# Nombre aún por definir (Planificador de menús y compras de alimentos)
 
 ## Problema a resolver
-Cuando viajamos, ya sea por vacaciones, trabajo o simplemente porque queremos hacer una escapada y salir de la monotonía y el estrés diario, nos enfrentamos al problema de no saber qué hacer o visitar en el lugar en el que nos encontramos. La mayoría de veces acudimos a páginas web de Internet donde nos recomiendan una serie de sitios de interés turístico, pero no son opciones personalizadas en función de nuestros gustos, tiempo y presupuesto económico. Es por ello por lo que se necesita saber qué se puede hacer en un determinado periodo de tiempo y el gasto que podría ocasionar, teniendo en cuenta las preferencias de cada persona y si se ha visitado con anterioridad ese lugar.
+A menudo nos enfrentamos a dificultades para establecer los menús semanales y, por ende, también a realizar compras de los alimentos necesarios para ello. Es un proceso un tanto abrumador y que requiere cierto tiempo, pues implica decidir qué vamos a cocinar, cuándo lo vamos a hacer, crear las listas de compras para tener lo necesario, entre otros. Además, en el seno familiar esta problemática se agrava si tenemos en cuenta las necesidades nutricionales individuales y las dietas especiales, si así lo requieren (celíacos, diabéticos, alergias, etc). 
+Es preciso también considerar que la dieta ha de ser equilibrada, por tanto, los alimentos que se escojan al hacer la compra deben estar en el rango nutricional adecuado.
 
 ## Configuración de GitHub
 Para verificar la configuración del repositorio, pulsa [aquí](https://github.com/johnwaves/quickpath-taxi/blob/Objetivo-0/docs/git-config.png).
