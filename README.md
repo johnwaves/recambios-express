@@ -1,8 +1,7 @@
-# MenuMaker
+# Nombre aún por definir
 
 ## Problema a resolver
-A menudo nos enfrentamos a dificultades para establecer los menús semanales y, por ende, también a realizar compras de los alimentos necesarios para ello. Es un proceso un tanto abrumador y que requiere cierto tiempo, pues implica decidir qué vamos a cocinar, cuándo lo vamos a hacer, crear las listas de compras para tener lo necesario, entre otros. Además, en el seno familiar esta problemática se agrava si tenemos en cuenta las necesidades nutricionales individuales y las dietas especiales, si así lo requieren (celíacos, diabéticos, alergias, etc). 
-Es preciso también considerar que la dieta ha de ser equilibrada, por tanto, los alimentos que se escojan al hacer la compra deben estar en el rango nutricional adecuado.
+Mi empresa se dedica a la venta de repuestos para automóviles. Al tener únicamente dos repartidores, existen algunos pedidos al final de la jornada que no se llegan a entregar. Esto sucede porque se priorizan los pedidos de los talleres (clientes) que más lejos se encuentran desde la ubicación del almacén, pues se emplea más tiempo en ir y volver. Los pedidos que por cercanía se pueden repartir el mismo día quedan a la espera hasta que se entregan los otros. Todo ello conlleva una demora de tiempo para los pedidos restantes, da lugar una disminución de las ventas y emporan las reseñas. Es por ello por lo que la asignación de pedidos para cada repartidor no resulta ser equitativa.
 
 ## Configuración de GitHub
 Para verificar la configuración del repositorio, pulsa [aquí](https://github.com/johnwaves/quickpath-taxi/blob/Objetivo-0/docs/git-config.png).
