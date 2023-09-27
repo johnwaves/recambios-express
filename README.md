@@ -11,7 +11,7 @@ Hasta el momento se ha avanzado hasta el [Objetivo 1](http://jj.github.io/IV/doc
 [Aquí](https://github.com/johnwaves/recambios-express/blob/Objetivo-1/docs/user-stories.md) aparecen las _user-stories_ del proyecto.
 
 - ### Milestones
-Los hitos o _milestones_ definidos se pueden consultar en este [enlace]().
+Los hitos o _milestones_ definidos se pueden consultar en este [enlace](https://github.com/johnwaves/recambios-express/blob/Objetivo-1/docs/milestones.md).
 
 ## Configuración de GitHub
 Para verificar la configuración del repositorio, pulsa [aquí](https://github.com/johnwaves/quickpath-taxi/blob/Objetivo-0/docs/git-config.png).
