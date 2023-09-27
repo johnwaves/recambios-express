@@ -12,7 +12,7 @@ Hasta el momento se ha avanzado hasta el [Objetivo 1](http://jj.github.io/IV/doc
 - ### [Milestones](https://github.com/johnwaves/recambios-express/blob/Objetivo-1/docs/milestones.md)
 
 ## Configuración de GitHub
-Para verificar la configuración del repositorio, pulsa [aquí](https://github.com/johnwaves/quickpath-taxi/blob/Objetivo-0/docs/git-config.png).
+Para verificar la configuración del repositorio, pulsa [aquí](https://github.com/johnwaves/recambios-express/blob/main/docs/git-config.png).
 
 ## Más información
 **NOTA:** Conforme vaya avanzando la asignatura esta descripción se irá actualizando. Asimismo, apareceán nuevas secciones y detalles.
