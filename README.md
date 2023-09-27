@@ -7,13 +7,13 @@ Los pedidos deben ser asignados de la forma más eficiente posible a cada repart
 
 ## Progreso del proyecto
 Hasta el momento se ha avanzado hasta el Objetivo 1 de la asignatura, lo que contempla:
-### Historias de usuario
+- ### Historias de usuario
 [Aquí](https://github.com/johnwaves/recambios-express/blob/Objetivo-1/docs/user-stories.md) aparecen las _user-stories_ del proyecto.
 
 - ### Milestones
 Los hitos o _milestones_ definidos se pueden consultar en este [enlace]().
 
-- ## Configuración de GitHub
+## Configuración de GitHub
 Para verificar la configuración del repositorio, pulsa [aquí](https://github.com/johnwaves/quickpath-taxi/blob/Objetivo-0/docs/git-config.png).
 
 ## Más información
