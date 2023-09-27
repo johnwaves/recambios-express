@@ -1,3 +1,3 @@
 # Historias de usuario
 
-- [HU-01]: como repartidor
+- [HU-01]: como repartidor.
