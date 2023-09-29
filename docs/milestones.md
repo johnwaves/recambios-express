@@ -3,7 +3,9 @@
 En este documento se recogen los hitos o _milestones_ del proyecto.
 
 ## [M-0](https://github.com/johnwaves/recambios-express/milestone/1): Modelo del problema. 
-Este milestone tiene como objetivo generar un modelo del problema a partir de las _user-stories_, identificando las entidades participantes y los elementos clave. Por ello, el entregable será un módulo que permita a los clientes realizar pedidos al almacén y asignarlos a los repartidores. La viabilidad la garantizarán los test previos a realizar.
+Este milestone tiene como objetivo generar un modelo del problema a partir de las _user-stories_, identificando las entidades participantes y los elementos clave. Lo que se entregará será una 
+versión codificada donde se definirán las estructuras de datos para dichas entidades y las relaciones entre ellas.
+La viabilidad se garantizará con la aprobación del gestor de producto o _product manager_.
 
 ## [M-1](https://github.com/johnwaves/recambios-express/milestone/2): Implementación de rectricciones temporales.
 Es preciso implementar una restricción de carácter temporal para entregar los pedidos, pues el horario de reparto no puede exceder el horario de trabajo establecido en la jornada laboral de los repartidores. Se entregará un módulo al que se le añadirá esta restricción una vez superadas las pruebas oportunas.
