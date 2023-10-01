@@ -5,8 +5,14 @@ Mi empresa se dedica a la venta de repuestos para automóviles. Al tener únicam
 
 Los pedidos deben ser asignados de la forma más eficiente posible a cada repartidor, sin priorizar únicamente aquellos que se entregan más lejos del almacén. También se deben tener en cuenta los horarios de trabajo de cada repartidor y el horario de apertura del almacén para establecer los intervalos de reparto y los pedidos a entregar.
 
+## Progreso del proyecto
+Se ha avanzado hasta el [Objetivo 1](http://jj.github.io/IV/documentos/proyecto/1.Planificacion) de la asignatura, lo que contempla:
+- ### [Historias de usuario](https://github.com/johnwaves/recambios-express/blob/Objetivo-1/docs/user-stories.md)
+
+- ### [Milestones](https://github.com/johnwaves/recambios-express/blob/Objetivo-1/docs/milestones.md)
+
 ## Configuración de GitHub
-Para verificar la configuración del repositorio, pulsa [aquí](https://github.com/johnwaves/quickpath-taxi/blob/Objetivo-0/docs/git-config.png).
+Para verificar la configuración del repositorio, pulsa [aquí](https://github.com/johnwaves/recambios-express/blob/main/docs/git-config.png).
 
 ## Más información
 **NOTA:** Conforme vaya avanzando la asignatura esta descripción se irá actualizando. Asimismo, apareceán nuevas secciones y detalles.
