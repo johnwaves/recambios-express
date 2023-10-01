@@ -7,7 +7,7 @@ Este milestone tiene como objetivo generar un modelo del problema a partir de la
 La viabilidad se garantizará con la aprobación del gestor de producto o _product manager_.
 
 ## [M-1](https://github.com/johnwaves/recambios-express/milestone/2): Creación y organización de pedidos.
-El propósito de este hito es la creación y organización de pedidos. Los talleres deben poder realizar pedidos al almacén y este, una vez recibidos, generará un listado ordenándolos de forma óptima para determinar cuáles se han de entregar primero durante el día en curso. El entregable será un módulo que incluya el código con las implementaciones mencionadas y será viable si supera las pruebas correspondientes. 
+El propósito de este hito es la creación y organización de pedidos. Los talleres deben poder realizar pedidos al almacén y este, una vez recibidos, indicará de forma óptima mediante un algoritmo cuáles tienen prioridad y, por tanto, se deben entregar primero durante el día en curso. El entregable será un módulo que incluya el código con las implementaciones mencionadas y será viable si supera las pruebas correspondientes. 
 
 ## [M-2](https://github.com/johnwaves/recambios-express/milestone/3): Asignación y planificación de pedidos.
 Para este hito se precisa realizar la asignación de pedidos a los repartidores en función de una restricción. Se debe tener en cuenta el horario de trabajo de cada repartidor para poder entregar los pedidos, pues el horario de reparto no lo puede exceder. Por tanto, la planificación diaria reflejará los pedidos a repartir en un determinado día y qué repartidor se hará cargo de cada uno. Se entregará un módulo donde vendrá el código para estas funcionalidades y, nuevamente, podrá ser viable siempre y cuando realice con éxito las pruebas.
