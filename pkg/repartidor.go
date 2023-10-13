@@ -9,8 +9,3 @@ type Horario interface {
     Inicio() string  // Obtener el horario de inicio de trabajo del repartidor
     Fin() string     // Obtener el horario de fin de trabajo del repartidor
 }
-
-type RepartidorRepository interface {
-    ObtenerPorID(id int) (Repartidor, error)   // Obtener un repartidor por su ID
-    Guardar(repartidor Repartidor) error      // Guardar un repartidor
-}
