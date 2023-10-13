@@ -1,28 +1,26 @@
 package pedido
 
-import ("recambios-express/pkg/repartidor")
-
 type Pedido struct {
-    id        int
-    clienteID int
-    repartidor Repartidor
+	id         int
+	clienteID  int
+	repartidor Repartidor
 }
 
 func NuevoPedido(id, clienteID int) *Pedido {
-    return &Pedido{
-        id:        id,
-        clienteID: clienteID,
-    }
+	return &Pedido{
+		id:        id,
+		clienteID: clienteID,
+	}
 }
 
 func (p *Pedido) ID() int {
-    return p.id
+	return p.id
 }
 
 func (p *Pedido) ClienteID() int {
-    return p.clienteID
+	return p.clienteID
 }
 
 func (p *Pedido) AsignarRepartidor(r Repartidor) {
-    p.repartidor = r
+	p.repartidor = r
 }
