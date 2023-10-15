@@ -1,4 +1,4 @@
-package cliente
+package main
 
 type Cliente struct {
 	id        int

@@ -1,4 +1,4 @@
-package pedido
+package main
 
 type Pedido struct {
 	id         int

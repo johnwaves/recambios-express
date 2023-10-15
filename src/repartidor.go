@@ -1,4 +1,4 @@
-package repartidor
+package main
 
 type Repartidor struct {
 	id      int
