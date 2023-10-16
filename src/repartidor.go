@@ -3,6 +3,7 @@ package main
 type Repartidor struct {
 	id      int
 	horario Horario
+	pedidos Pedido
 }
 
 type Horario struct {
@@ -23,4 +24,8 @@ func (r *Repartidor) ID() int {
 
 func (r *Repartidor) Horario() Horario {
 	return r.horario
+}
+
+func (r *Repartidor) Pedidos() Pedido {
+	return r.pedidos
 }
