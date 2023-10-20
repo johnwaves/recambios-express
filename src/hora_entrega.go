@@ -1,15 +1,15 @@
 package src
 
 type HoraEntrega struct {
-	hora_estimada string
+	horaEstimada string
 }
 
-func NuevoHoraEntrega(hora_estimada string) *HoraEntrega {
+func NuevoHoraEntrega(horaEstimada string) *HoraEntrega {
 	return &HoraEntrega{
-		hora_estimada: hora_estimada,
+		horaEstimada: horaEstimada,
 	}
 }
 
 func (h *HoraEntrega) HORAENTREGA() string {
-	return h.hora_estimada
+	return h.horaEstimada
 }

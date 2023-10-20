@@ -1,20 +1,20 @@
 package src
 
 type UbicacionCliente struct {
-	calle                   string
-	numero                  int
-	poblacion               string
-	codigo_postal           int
-	tiempo_estimado_minutos int
+	calle                 string
+	numero                int
+	poblacion             string
+	codigoPostal          int
+	tiempoEstimadoMinutos int
 }
 
 func NuevaUbicacionCliente(calle string, numero int, poblacion string, codigo_postal int, tiempo_estimado_minutos int) *UbicacionCliente {
 	return &UbicacionCliente{
-		calle:                   calle,
-		numero:                  numero,
-		poblacion:               poblacion,
-		codigo_postal:           codigo_postal,
-		tiempo_estimado_minutos: tiempo_estimado_minutos,
+		calle:                 calle,
+		numero:                numero,
+		poblacion:             poblacion,
+		codigoPostal:          codigo_postal,
+		tiempoEstimadoMinutos: tiempo_estimado_minutos,
 	}
 }
 
@@ -31,9 +31,9 @@ func (u *UbicacionCliente) POBLACION() string {
 }
 
 func (u *UbicacionCliente) CODIGO_POSTAL() int {
-	return u.codigo_postal
+	return u.codigoPostal
 }
 
 func (u *UbicacionCliente) TIEMPO_ESTIMADO() int {
-	return u.tiempo_estimado_minutos
+	return u.tiempoEstimadoMinutos
 }

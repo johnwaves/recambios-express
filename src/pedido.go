@@ -2,11 +2,11 @@ package src
 
 type Pedido struct {
 	id        int
-	piezas    []Pieza
+	piezas    map[Pieza]int
 	ubicacion UbicacionCliente
 }
 
-func NuevoPedido(id int, piezas []Pieza, ubicacion UbicacionCliente) *Pedido {
+func NuevoPedido(id int, piezas map[Pieza]int, ubicacion UbicacionCliente) *Pedido {
 	return &Pedido{
 		id:        id,
 		piezas:    piezas,
@@ -18,7 +18,7 @@ func (p *Pedido) ID() int {
 	return p.id
 }
 
-func (p *Pedido) PIEZAS() []Pieza {
+func (p *Pedido) PIEZAS() map[Pieza]int {
 	return p.piezas
 }
 

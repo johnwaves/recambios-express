@@ -1,24 +1,24 @@
 package src
 
 type Repartidor struct {
-	nombre_completo    string
-	pedidos_pendientes []Pedido
+	nombreCompleto    string
+	pedidosPendientes []Pedido
 }
 
-func NuevoRepartidor(nombre_completo string) *Repartidor {
+func NuevoRepartidor(nombreCompleto string) *Repartidor {
 	return &Repartidor{
-		nombre_completo: nombre_completo,
+		nombreCompleto: nombreCompleto,
 	}
 }
 
 func (r *Repartidor) NOMBRE() string {
-	return r.nombre_completo
+	return r.nombreCompleto
 }
 
 func (r *Repartidor) PEDIDOS() []Pedido {
-	return r.pedidos_pendientes
+	return r.pedidosPendientes
 }
 
 func (r *Repartidor) ASIGNAR_PEDIDO(pedido Pedido) {
-	r.pedidos_pendientes = append(r.pedidos_pendientes, pedido)
+	r.pedidosPendientes = append(r.pedidosPendientes, pedido)
 }
