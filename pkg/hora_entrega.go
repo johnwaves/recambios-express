@@ -1,10 +1,10 @@
 package pkg
 
 type HoraEntrega struct {
-	horaEstimada string
+	horaEstimada Time
 }
 
-func NuevoHoraEntrega(horaEstimada string) *HoraEntrega {
+func NuevoHoraEntrega(horaEstimada Time) *HoraEntrega {
 	return &HoraEntrega{
 		horaEstimada: horaEstimada,
 	}
