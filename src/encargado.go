@@ -1,4 +1,4 @@
-package src
+package tienda
 
 type Encargado struct {
 	pedidosPendientes       []Pedido
