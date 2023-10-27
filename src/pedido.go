@@ -13,15 +13,3 @@ func NuevoPedido(id int, piezas map[Pieza]int, ubicacion UbicacionCliente) *Pedi
 		ubicacion: ubicacion,
 	}
 }
-
-func (p *Pedido) ID() int {
-	return p.id
-}
-
-func (p *Pedido) PIEZAS() map[Pieza]int {
-	return p.piezas
-}
-
-func (p *Pedido) UBICACION() UbicacionCliente {
-	return p.ubicacion
-}

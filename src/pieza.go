@@ -10,11 +10,3 @@ func NuevaPieza(id int) *Pieza {
 		id: id,
 	}
 }
-
-func (p *Pieza) NOMBRE() string {
-	return p.nombre
-}
-
-func (p *Pieza) ID() int {
-	return p.id
-}
