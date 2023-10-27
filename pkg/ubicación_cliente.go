@@ -1,4 +1,4 @@
-package tienda
+package pkg
 
 type UbicacionCliente struct {
 	calle                 string

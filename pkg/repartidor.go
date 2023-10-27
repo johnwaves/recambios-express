@@ -1,4 +1,4 @@
-package tienda
+package pkg
 
 type Repartidor struct {
 	nombreCompleto    string
