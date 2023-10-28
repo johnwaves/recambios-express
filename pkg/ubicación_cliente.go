@@ -1,6 +1,7 @@
 package pkg
 
-type UbicacionCliente struct {
+type Cliente struct {
+	nombreCliente         string
 	calle                 string
 	numero                int
 	poblacion             string
@@ -8,8 +9,9 @@ type UbicacionCliente struct {
 	tiempoEstimadoMinutos int
 }
 
-func NuevaUbicacionCliente(calle string, numero int, poblacion string, codigo_postal int, tiempo_estimado_minutos int) *UbicacionCliente {
-	return &UbicacionCliente{
+func NuevoCliente(nombreCliente string, calle string, numero int, poblacion string, codigo_postal int, tiempo_estimado_minutos int) *Cliente {
+	return &Cliente{
+		nombreCliente:         nombreCliente,
 		calle:                 calle,
 		numero:                numero,
 		poblacion:             poblacion,

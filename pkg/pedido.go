@@ -1,13 +1,13 @@
 package pkg
 
 type Pedido struct {
-	id        int
-	ubicacion UbicacionCliente
+	id      int
+	cliente Cliente
 }
 
-func NuevoPedido(id int, ubicacion UbicacionCliente) *Pedido {
+func NuevoPedido(id int, cliente Cliente) *Pedido {
 	return &Pedido{
-		id:        id,
-		ubicacion: ubicacion,
+		id:      id,
+		cliente: cliente,
 	}
 }
