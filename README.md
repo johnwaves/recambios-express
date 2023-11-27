@@ -12,6 +12,8 @@ Se ha avanzado hasta el [Objetivo 3](http://jj.github.io/IV/documentos/proyecto/
 ## Configuración de GitHub
 Para verificar la configuración del repositorio, pulsa [aquí](https://github.com/johnwaves/recambios-express/blob/main/docs/git-config.png).
 
+## Apartado destinado al Objetivo 3.
+
 ## Más información
 **NOTA:** Conforme vaya avanzando la asignatura esta descripción se irá actualizando. Asimismo, apareceán nuevas secciones y detalles.
 
