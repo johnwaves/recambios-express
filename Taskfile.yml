@@ -19,4 +19,4 @@ tasks:
   check:
     desc: Comprueba la sintaxis del proyecto.
     cmds:
-     - gofmt -l -s ./pkg/
+     - gofmt -e ./pkg/ > /dev/null
