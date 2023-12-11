@@ -23,14 +23,12 @@ Para automatizar las tareas se utiliza **Task**. [Aquí](https://github.com/john
 - `task build`: compila el proyecto.
 
 ## Progreso del proyecto
-Se ha avanzado hasta el [Objetivo 3](http://jj.github.io/IV/documentos/proyecto/3.Automatizar) de la asignatura.
+Se ha avanzado hasta el [Objetivo 4](http://jj.github.io/IV/documentos/proyecto/4.Tests) de la asignatura.
 
 Las tareas realizadas en objetivos anteriores se pueden consultar accediendo a las diferentes ramas de este repositorio.
 
 ## Configuración de GitHub
 Para verificar la configuración del repositorio, pulsa [aquí](https://github.com/johnwaves/recambios-express/blob/main/docs/git-config.png).
-
-## Apartado destinado al Objetivo 3.
 
 ## Más información
 **NOTA:** Conforme vaya avanzando la asignatura esta descripción se irá actualizando. Asimismo, apareceán nuevas secciones y detalles.
