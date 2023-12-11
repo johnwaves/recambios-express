@@ -1,0 +1,22 @@
+version: '3'
+
+tasks:
+  installdeps:
+    desc: Instala las dependencias del proyecto.
+    cmds:
+      - go mod download
+
+  updatedeps:
+    desc: Actualiza las dependencias del proyecto.
+    cmds:
+      - go get
+  
+  build:
+    desc: Compila el proyecto.
+    cmds:
+      - go build
+
+  check:
+    desc: Comprueba la sintaxis del proyecto.
+    cmds:
+     - gofmt -e ./pkg/ > /dev/null

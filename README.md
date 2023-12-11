@@ -11,6 +11,17 @@ A continuación se detalla la información referente al punto de partida del pro
 - [Historias de usuario](https://github.com/johnwaves/recambios-express/blob/main/docs/user-stories.md)
 - [Hitos](https://github.com/johnwaves/recambios-express/blob/main/docs/milestones.md)
 
+## Herramientas
+### Gestor de dependencias
+**Go Modules** es la herramienta encargada de gestionar las dependencias del proyecto. [Aquí](https://github.com/johnwaves/recambios-express/blob/Objetivo-3/docs/gestor_dependencias.md) se detallan los motivos de esta elección.
+
+### Gestor de tareas
+Para automatizar las tareas se utiliza **Task**. [Aquí](https://github.com/johnwaves/recambios-express/blob/Objetivo-3/docs/gestor_tareas.md) se detallan los motivos de esta elección. Las órdenes disponibles son:
+- `task installdeps`: instala todas las dependencias que son requeridas en el proyecto.
+- `task updatedeps`: actualiza las dependencias instaladas.
+- `task check`: comprueba la sintaxis y señala los posibles errores que puedan existir.
+- `task build`: compila el proyecto.
+
 ## Progreso del proyecto
 Se ha avanzado hasta el [Objetivo 3](http://jj.github.io/IV/documentos/proyecto/3.Automatizar) de la asignatura.
 
@@ -18,6 +29,8 @@ Las tareas realizadas en objetivos anteriores se pueden consultar accediendo a l
 
 ## Configuración de GitHub
 Para verificar la configuración del repositorio, pulsa [aquí](https://github.com/johnwaves/recambios-express/blob/main/docs/git-config.png).
+
+## Apartado destinado al Objetivo 3.
 
 ## Más información
 **NOTA:** Conforme vaya avanzando la asignatura esta descripción se irá actualizando. Asimismo, apareceán nuevas secciones y detalles.
