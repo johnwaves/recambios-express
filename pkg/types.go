@@ -6,10 +6,10 @@ type Direccion struct {
 	codigo_postal int
 }
 
-func NewDireccion(calleNumero string, poblacion string, codigoPostal int) *Direccion {
+func NewDireccion(calle_numero string, poblacion string, codigo_postal int) *Direccion {
 	return &Direccion{
-		calle_numero:  calleNumero,
+		calle_numero:  calle_numero,
 		poblacion:     poblacion,
-		codigo_postal: codigoPostal,
+		codigo_postal: codigo_postal,
 	}
 }
