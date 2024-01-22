@@ -1,5 +1,8 @@
 package pkg
 
+const ALMACEN_LON float32 = 37.5836344
+const ALMACEN_LAT float32 = -1.7863288
+
 type Direccion struct {
 	calle_numero  string
 	poblacion     string
