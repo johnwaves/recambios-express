@@ -19,3 +19,9 @@ func (c *Cliente) Nombre() string {
 func (c *Cliente) FormatDireccionCliente() string {
 	return c.direccion_entrega.FormatDireccion()
 }
+
+func (c *Cliente) HacerPedido(items []ItemPedido) *Pedido {
+	pedido := NewPedido(items)
+	pedido.asignarCliente(c)
+	return pedido
+}

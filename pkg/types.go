@@ -22,3 +22,8 @@ func NewDireccion(calle_numero string, poblacion string, codigo_postal int) *Dir
 func (d *Direccion) FormatDireccion() string {
 	return fmt.Sprintf("%s, %s, %d", d.calle_numero, d.poblacion, d.codigo_postal)
 }
+
+type ItemPedido struct {
+	pieza    string
+	cantidad int
+}

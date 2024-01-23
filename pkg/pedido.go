@@ -1,6 +1,20 @@
 package pkg
 
 type Pedido struct {
-	hora_entrega_estimada Time
-	cliente               Cliente
+	cliente *Cliente
+	items   []ItemPedido
+}
+
+func NewPedido(items []ItemPedido) *Pedido {
+	return &Pedido{
+		items: items,
+	}
+}
+
+func (p *Pedido) asignarCliente(c *Cliente) {
+	p.cliente = c
+}
+
+func (p *Pedido) Cliente() *Cliente {
+	return p.cliente
 }
