@@ -1,5 +1,8 @@
 package pkg
 
+const MaxPedidos int = 10
+
 type Ruta struct {
-	ruta []Pedido
+	pedidosConDistancia [MaxPedidos]PedidoConDistancia
+	cantidadActual      int
 }

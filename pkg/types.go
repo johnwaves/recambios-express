@@ -27,3 +27,8 @@ type ItemPedido struct {
 	pieza    string
 	cantidad int
 }
+
+type PedidoConDistancia struct {
+	Pedido    Pedido
+	Distancia float64
+}
