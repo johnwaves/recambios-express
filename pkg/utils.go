@@ -12,8 +12,8 @@ import (
 const radioTierraKM = 6371
 
 func ObtenerCoordenadas(direccion Direccion) (Coordenadas, error) {
-	query := fmt.Sprintf("%s, %s, %d", direccion.calle_numero, direccion.poblacion, direccion.codigo_postal)
 
+	query := direccion.FormatDireccion()
 	apiURL := fmt.Sprintf("https://nominatim.openstreetmap.org/search?q=%s&format=json&polygon=1&addressdetails=1", url.QueryEscape(query))
 
 	resp, err := http.Get(apiURL)
