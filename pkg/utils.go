@@ -11,6 +11,16 @@ import (
 
 const radioTierraKM = 6371
 
+const (
+	almacenLat = 37.5836344
+	almacenLon = -1.7863288
+)
+
+var AlmacenCoordenadas = Coordenadas{
+	Lat: almacenLat,
+	Lon: almacenLon,
+}
+
 func ObtenerCoordenadas(direccion Direccion) (Coordenadas, error) {
 
 	query := direccion.FormatDireccion()
