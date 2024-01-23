@@ -1,7 +1,9 @@
 package pkg
 
-const ALMACEN_LON float32 = 37.5836344
-const ALMACEN_LAT float32 = -1.7863288
+import "fmt"
+
+const ALMACEN_LAT float32 = 37.5836344
+const ALMACEN_LON float32 = -1.7863288
 
 type Direccion struct {
 	calle_numero  string
@@ -15,4 +17,8 @@ func NewDireccion(calle_numero string, poblacion string, codigo_postal int) *Dir
 		poblacion:     poblacion,
 		codigo_postal: codigo_postal,
 	}
+}
+
+func (d *Direccion) FormatDireccion() string {
+	return fmt.Sprintf("%s, %s, %d", d.calle_numero, d.poblacion, d.codigo_postal)
 }
