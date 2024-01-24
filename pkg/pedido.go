@@ -18,3 +18,7 @@ func (p *Pedido) asignarCliente(c *Cliente) {
 func (p *Pedido) Cliente() *Cliente {
 	return p.cliente
 }
+
+func (p *Pedido) Items() []ItemPedido {
+	return p.items
+}
