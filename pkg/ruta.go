@@ -2,16 +2,12 @@ package pkg
 
 import "sort"
 
-const MaxPedidos int = 10
-
 type Ruta struct {
 	pedidos []PedidoConDistancia
 }
 
 func NewRuta() *Ruta {
-	return &Ruta{
-		pedidos: make([]PedidoConDistancia, 0, MaxPedidos),
-	}
+	return &Ruta{}
 }
 
 func (r *Ruta) AddPedido(pedido *Pedido) {
