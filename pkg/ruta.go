@@ -1,6 +1,9 @@
 package pkg
 
-import "sort"
+import (
+	"errors"
+	"sort"
+)
 
 type Ruta struct {
 	pedidos []PedidoConDistancia
@@ -10,16 +13,50 @@ func NewRuta() *Ruta {
 	return &Ruta{}
 }
 
-func (r *Ruta) AddPedido(pedido *Pedido) {
-	coordenadasDestino, _ := ObtenerCoordenadas(pedido.Cliente().direccion_entrega)
-	distancia := Haversine(AlmacenCoordenadas, coordenadasDestino)
+func (r *Ruta) AddPedido(pedido *Pedido) error {
+	cliente := pedido.Cliente()
 
-	pedidoConDistancia := PedidoConDistancia{
-		Pedido:    *pedido,
-		Distancia: distancia,
+	if cliente.Nombre() == "" {
+		return errors.New("El nombre del cliente no puede estar vacío.")
 	}
 
-	r.pedidos = append(r.pedidos, pedidoConDistancia)
+	direccion := cliente.direccion_entrega
+	if direccion.calle_numero == "" || direccion.poblacion == "" || direccion.codigo_postal == 0 {
+		return errors.New("Los datos de la dirección postal están incompletos.")
+	}
+
+	if len(pedido.items) == 0 {
+		return errors.New("El pedido debe contener al menos una pieza.")
+	} else {
+		for _, item := range pedido.items {
+			if item.pieza == "" {
+				return errors.New("Cada pieza debe tener un nombre.")
+			}
+		}
+	}
+
+	for _, item := range pedido.items {
+		if item.cantidad <= 0 {
+			return errors.New("Cada pieza debe tener una cantidad mayor a cero.")
+		}
+	}
+
+	coordenadasDestino, _ := ObtenerCoordenadas(direccion)
+
+	if coordenadasDestino.Lat != 0.0 && coordenadasDestino.Lon != 0.0 {
+		distancia := Haversine(AlmacenCoordenadas, coordenadasDestino)
+
+		pedidoConDistancia := PedidoConDistancia{
+			Pedido:    *pedido,
+			Distancia: distancia,
+		}
+
+		r.pedidos = append(r.pedidos, pedidoConDistancia)
+	} else {
+		return errors.New("La dirección de entrega no es válida.")
+	}
+
+	return nil
 }
 
 func (r *Ruta) CantidadActual() int {
