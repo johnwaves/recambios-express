@@ -15,15 +15,24 @@ func TestNewRuta(t *testing.T) {
 
 func TestErrorCoordenadas(t *testing.T) {
 	ruta := NewRuta()
-
 	pedidosIniciales := len(ruta.pedidos)
 
 	direccion := NewDireccion("Calle Bartolo Escopeta", "Villarrobledo del Entresuelo", 12345)
-	cliente := NewCliente("Manolo Escobar", *direccion)
-	items := []ItemPedido{{pieza: "Ambientador con olor a pino", cantidad: 1}}
-	pedido := cliente.HacerPedido(items)
+	cliente, err := NewCliente("Manolo Escobar", *direccion)
+	if err != nil {
+		t.Logf("Error al crear el cliente: %v", err)
+	}
 
-	ruta.AddPedido(pedido)
+	items := []ItemPedido{{pieza: "Ambientador con olor a pino", cantidad: 1}}
+	pedido, err := cliente.HacerPedido(items)
+	if err != nil {
+		t.Logf("Error al hacer el pedido: %v", err)
+	}
+
+	err = ruta.AddPedido(pedido)
+	if err != nil {
+		t.Logf("Error al añadir el pedido a la ruta: %v", err)
+	}
 
 	assert.Equal(t, pedidosIniciales, len(ruta.pedidos), "Se esperaba que el pedido no se añadiera debido a una dirección no válida.")
 }
@@ -41,19 +50,29 @@ func TestDistanciaAproximativa(t *testing.T) {
 		distanciaManualSuperior float64
 	}{
 		nombre:                  "Manuel",
-		calle:                   "Vicente Ruíz Llamas 50",
+		calle:                   "Calle Aurora 3",
 		ciudad:                  "Puerto Lumbreras",
 		codigoPostal:            30890,
 		items:                   []ItemPedido{{pieza: "Embrague", cantidad: 1}},
-		distanciaManualInferior: 2.79,
-		distanciaManualSuperior: 2.81,
+		distanciaManualInferior: 2.94,
+		distanciaManualSuperior: 2.96,
 	}
 
 	direccion := NewDireccion(cliente.calle, cliente.ciudad, cliente.codigoPostal)
-	nuevoCliente := NewCliente(cliente.nombre, *direccion)
-	pedido := nuevoCliente.HacerPedido(cliente.items)
+	nuevoCliente, err := NewCliente(cliente.nombre, *direccion)
+	if err != nil {
+		t.Fatalf("Error al crear el cliente: %v", err)
+	}
 
-	ruta.AddPedido(pedido)
+	pedido, err := nuevoCliente.HacerPedido(cliente.items)
+	if err != nil {
+		t.Fatalf("Error al hacer el pedido: %v", err)
+	}
+
+	err = ruta.AddPedido(pedido)
+	if err != nil {
+		t.Fatalf("Error al añadir el pedido: %v", err)
+	}
 
 	distanciaReal := ruta.pedidos[len(ruta.pedidos)-1].Distancia
 
@@ -61,6 +80,61 @@ func TestDistanciaAproximativa(t *testing.T) {
 
 	assert.GreaterOrEqual(t, distanciaReal, cliente.distanciaManualInferior, "La distancia real es menor que la distancia manual inferior.")
 	assert.LessOrEqual(t, distanciaReal, cliente.distanciaManualSuperior, "La distancia real es mayor que la distancia manual superior.")
+}
+
+func TestClienteNombre(t *testing.T) {
+	direccion := NewDireccion("Calle Lope Gisbert 35", "Lorca", 30800)
+	_, err := NewCliente("", *direccion)
+
+	if err != nil {
+		t.Logf("Error esperado: %v", err)
+	} else {
+		t.Errorf("Se esperaba un error cuando el nombre del cliente está vacío")
+	}
+}
+
+func TestClienteDireccionCalle(t *testing.T) {
+	direccion := NewDireccion("", "Lorca", 30800)
+	_, err := NewCliente("Ángel", *direccion)
+
+	if err != nil {
+		t.Logf("Error esperado: %v", err)
+	} else {
+		t.Errorf("Se esperaba un error cuando la calle del cliente está vacía.")
+	}
+}
+
+func TestClienteDireccionPoblacion(t *testing.T) {
+	direccion := NewDireccion("Calle Lope Gisbert 35", "", 30800)
+	_, err := NewCliente("Ángel", *direccion)
+
+	if err != nil {
+		t.Logf("Error esperado: %v", err)
+	} else {
+		t.Errorf("Se esperaba un error cuando la población del cliente está vacía.")
+	}
+}
+
+func TestClienteDireccionCodigoPostal(t *testing.T) {
+	direccion := NewDireccion("Calle Lope Gisbert 35", "Lorca", 0)
+	_, err := NewCliente("Ángel", *direccion)
+
+	if err != nil {
+		t.Logf("Error esperado: %v", err)
+	} else {
+		t.Errorf("Se esperaba un error cuando el código postal del cliente es cero.")
+	}
+}
+
+func TestClienteDireccionCodigoPostalNegativo(t *testing.T) {
+	direccion := NewDireccion("Calle Lope Gisbert 35", "Lorca", -1)
+	_, err := NewCliente("Ángel", *direccion)
+
+	if err != nil {
+		t.Logf("Error esperado: %v", err)
+	} else {
+		t.Errorf("Se esperaba un error cuando el código postal del cliente es negativo.")
+	}
 }
 
 func TestAddPedido(t *testing.T) {
@@ -122,7 +196,7 @@ func TestAddPedido(t *testing.T) {
 			calle:        "Ramón y Cajal 45",
 			ciudad:       "Puerto Lumbreras",
 			codigoPostal: 30890,
-			items:        []ItemPedido{{pieza: "", cantidad: 1}},
+			items:        []ItemPedido{{pieza: "", cantidad: 1}, {pieza: "Alfombrilla", cantidad: -2}},
 		},
 		{
 			nombre:       "José Ruíz",
@@ -134,23 +208,42 @@ func TestAddPedido(t *testing.T) {
 	}
 
 	var numPedidosTotales int = 8
+	var pedidosEsperados int = 2
+	var pedidosAñadidos int
+	var pedidosInvalidos int
 
-	for _, cliente := range clientes {
-		direccion := NewDireccion(cliente.calle, cliente.ciudad, cliente.codigoPostal)
-		nuevoCliente := NewCliente(cliente.nombre, *direccion)
-		pedido := nuevoCliente.HacerPedido(cliente.items)
-
-		ruta.AddPedido(pedido)
+	for _, clienteData := range clientes {
+		direccion := NewDireccion(clienteData.calle, clienteData.ciudad, clienteData.codigoPostal)
+		nuevoCliente, err := NewCliente(clienteData.nombre, *direccion)
+		if err != nil {
+			t.Logf("Error al crear el cliente: %v", err)
+			pedidosInvalidos++
+		} else {
+			pedido, err := nuevoCliente.HacerPedido(clienteData.items)
+			if err != nil {
+				t.Logf("Error al hacer el pedido: %v", err)
+				pedidosInvalidos++
+			} else {
+				err = ruta.AddPedido(pedido)
+				if err != nil {
+					t.Logf("Error al añadir el pedido: %v", err)
+					pedidosInvalidos++
+				} else {
+					pedidosAñadidos++
+				}
+			}
+		}
 	}
 
 	t.Logf("Número esperado de pedidos: %d", numPedidosTotales)
-	t.Logf("Número real de pedidos añadidos: %d", len(ruta.pedidos))
+	t.Logf("Número real de pedidos añadidos: %d", pedidosAñadidos)
+	t.Logf("Número de pedidos inválidos: %d", pedidosInvalidos)
 
 	for i, pedido := range ruta.pedidos {
 		t.Logf("\nPedido %d: %+v\n", i+1, pedido)
 	}
 
-	assert.NotEqual(t, numPedidosTotales, len(ruta.pedidos), "El número de pedidos añadidos debería ser diferente al número total de pedidos.")
+	assert.Equal(t, pedidosEsperados, pedidosAñadidos, "El número de pedidos añadidos debería ser igual al número total de pedidos válidos.")
 }
 
 var clientesOrdena = []struct {
@@ -251,13 +344,22 @@ var clientesOrdena = []struct {
 func TestDistancias(t *testing.T) {
 	ruta := NewRuta()
 
-	for _, cliente := range clientesOrdena {
-		direccion := NewDireccion(cliente.calle, cliente.ciudad, cliente.codigoPostal)
-		nuevoCliente := NewCliente(cliente.nombre, *direccion)
-		pedido := nuevoCliente.HacerPedido(cliente.items)
+	for _, clienteData := range clientesOrdena {
+		direccion := NewDireccion(clienteData.calle, clienteData.ciudad, clienteData.codigoPostal)
+		nuevoCliente, err := NewCliente(clienteData.nombre, *direccion)
+		if err != nil {
+			t.Fatalf("Error al crear el cliente: %v", err)
+		}
 
-		err := ruta.AddPedido(pedido)
-		assert.NoError(t, err, "No debería haber error al añadir un pedido.")
+		pedido, err := nuevoCliente.HacerPedido(clienteData.items)
+		if err != nil {
+			t.Fatalf("Error al hacer el pedido: %v", err)
+		}
+
+		err = ruta.AddPedido(pedido)
+		if err != nil {
+			t.Fatalf("Error al añadir el pedido: %v", err)
+		}
 	}
 
 	ruta.OrdenarPedidos()
@@ -270,19 +372,27 @@ func TestDistancias(t *testing.T) {
 			}
 		}
 	}
-
 }
 
 func TestOrdenarPedidos(t *testing.T) {
 	ruta := NewRuta()
 
-	for _, cliente := range clientesOrdena {
-		direccion := NewDireccion(cliente.calle, cliente.ciudad, cliente.codigoPostal)
-		nuevoCliente := NewCliente(cliente.nombre, *direccion)
-		pedido := nuevoCliente.HacerPedido(cliente.items)
+	for _, clienteData := range clientesOrdena {
+		direccion := NewDireccion(clienteData.calle, clienteData.ciudad, clienteData.codigoPostal)
+		nuevoCliente, err := NewCliente(clienteData.nombre, *direccion)
+		if err != nil {
+			t.Fatalf("Error al crear el cliente: %v", err)
+		}
 
-		err := ruta.AddPedido(pedido)
-		assert.NoError(t, err, "No debería haber error al añadir un pedido.")
+		pedido, err := nuevoCliente.HacerPedido(clienteData.items)
+		if err != nil {
+			t.Fatalf("Error al hacer el pedido: %v", err)
+		}
+
+		err = ruta.AddPedido(pedido)
+		if err != nil {
+			t.Fatalf("Error al añadir el pedido: %v", err)
+		}
 	}
 
 	ruta.OrdenarPedidos()
@@ -306,5 +416,4 @@ func TestOrdenarPedidos(t *testing.T) {
 	for i, pedido := range ruta.pedidos {
 		t.Logf("\nPedido %d: %+v\n", i+1, pedido)
 	}
-
 }
