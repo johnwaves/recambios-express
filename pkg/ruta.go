@@ -87,11 +87,12 @@ func (r *Ruta) OrdenarPedidos() {
 
 	var pedidosCortos, pedidosMedios, pedidosLargos []PedidoConDistancia
 	for _, pedido := range r.pedidos {
-		if pedido.Distancia < distanciaMedia {
+		switch {
+		case pedido.Distancia < distanciaMedia:
 			pedidosCortos = append(pedidosCortos, pedido)
-		} else if pedido.Distancia < distanciaMaxima*porcentajePedidosLargos {
+		case pedido.Distancia < distanciaMaxima*porcentajePedidosLargos:
 			pedidosMedios = append(pedidosMedios, pedido)
-		} else {
+		default:
 			pedidosLargos = append(pedidosLargos, pedido)
 		}
 	}
