@@ -16,30 +16,7 @@ func NewRuta() *Ruta {
 func (r *Ruta) AddPedido(pedido *Pedido) error {
 	cliente := pedido.Cliente()
 
-	if cliente.Nombre() == "" {
-		return errors.New("El nombre del cliente no puede estar vacío.")
-	}
-
 	direccion := cliente.direccion_entrega
-	if direccion.calle_numero == "" || direccion.poblacion == "" || direccion.codigo_postal == 0 {
-		return errors.New("Los datos de la dirección postal están incompletos.")
-	}
-
-	if len(pedido.items) == 0 {
-		return errors.New("El pedido debe contener al menos una pieza.")
-	} else {
-		for _, item := range pedido.items {
-			if item.pieza == "" {
-				return errors.New("Cada pieza debe tener un nombre.")
-			}
-		}
-	}
-
-	for _, item := range pedido.items {
-		if item.cantidad <= 0 {
-			return errors.New("Cada pieza debe tener una cantidad mayor a cero.")
-		}
-	}
 
 	coordenadasDestino, _ := ObtenerCoordenadas(direccion)
 
@@ -53,7 +30,7 @@ func (r *Ruta) AddPedido(pedido *Pedido) error {
 
 		r.pedidos = append(r.pedidos, pedidoConDistancia)
 	} else {
-		return errors.New("La dirección de entrega no es válida.")
+		return errors.New("la dirección de entrega no es existe.")
 	}
 
 	return nil
