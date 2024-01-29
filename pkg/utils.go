@@ -11,6 +11,8 @@ import (
 
 const radioTierraKM = 6371
 
+const porcentajePedidosLargos = 0.75
+
 const (
 	almacenLat = 37.5836344
 	almacenLon = -1.7863288

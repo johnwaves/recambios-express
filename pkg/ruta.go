@@ -89,7 +89,7 @@ func (r *Ruta) OrdenarPedidos() {
 	for _, pedido := range r.pedidos {
 		if pedido.Distancia < distanciaMedia {
 			pedidosCortos = append(pedidosCortos, pedido)
-		} else if pedido.Distancia < distanciaMaxima*0.75 {
+		} else if pedido.Distancia < distanciaMaxima*porcentajePedidosLargos {
 			pedidosMedios = append(pedidosMedios, pedido)
 		} else {
 			pedidosLargos = append(pedidosLargos, pedido)
