@@ -1,15 +1,18 @@
 # Herramienta para la elaboración y gestión de tests y pruebas
 
-## Criterios
-La elección de herramientas para las pruebas y los tests que se realizarán antes de entregar un PMV deben seguir la misma línea de los criterios establecidos para los gestores de dependencias y tareas. Estas herramientas, en concreto y ante todo, deben ofrecer compatibilidad con Go, permitir una integración sin problemas con las demás medios y ofrecer facilidad para su configuración.
+## Criterios y requisitos
+Al elegir las herramientas adecuadas para la elaboración y gestión de tests y pruebas en Go, es crucial establecer tanto requisitos básicos como criterios de selección detallados. Estos facilitarán la selección de herramientas más eficientes y compatibles con las necesidades de desarrollo.
 
-Además, la herramienta de test debe:
-- crear aserciones flexibles, rápidas y eficientes,
-- si es necesario, agrupar las aserciones en subtests,
-- planificar todos los test necesarios,
-- incluir soporte para varios tipos de test, si se estima oportuno,
-- generar informes o mostrar, simplemente, información sobre el resultado de los test,
-- tener la capacidad de  automatizar los test para mejorar la eficiencia y la consistencia del proceso de prueba.
+### Requisitos básicos
+- **Compatibilidad con el lenguaje Go y su toolchain actual**. Las herramientas deben integrarse sin problemas con el entorno de desarrollo Go existente.
+- **Facilidad de configuración**. Deben ser fáciles de configurar y utilizar.
+
+### Criterios de selección
+- **Mantenimiento y actualizaciones regulares**. Las herramientas deben recibir actualizaciones y mantenimiento regulares para garantizar que no quedan obsoletas.
+- **Rendimiento de aserciones y pruebas**. Deben permitir la creación de aserciones rápidas, eficientes y flexibles.
+- **Generación de informes**. Otra cuestión de vital importancia es la capacidad que deben tener para generar informes o mostrar información relevante sobre los resultados de los tests.
+- **Soporte para diversos tipos de pruebas**. Deben ser versátiles para soportar diferentes tipos de pruebas según sea necesario.
+- **Automatización de pruebas**. Por último, el tener la capacidad para automatizar los tests mejorará la eficiencia y consistencia del proceso.
 
 ## Listado de herramientas para la elección
 Considerando estos criterios, se evalúan múltiples opciones.
