@@ -8,11 +8,13 @@ Al elegir las herramientas adecuadas para la elaboración y gestión de tests y 
 - **Facilidad de configuración**. Deben ser fáciles de configurar y utilizar.
 
 ### Criterios de selección
-- **Mantenimiento y actualizaciones regulares**. Las herramientas deben recibir actualizaciones y mantenimiento regulares para garantizar que no quedan obsoletas.
-- **Rendimiento de aserciones y pruebas**. Deben permitir la creación de aserciones rápidas, eficientes y flexibles.
-- **Generación de informes**. Otra cuestión de vital importancia es la capacidad que deben tener para generar informes o mostrar información relevante sobre los resultados de los tests.
-- **Soporte para diversos tipos de pruebas**. Deben ser versátiles para soportar diferentes tipos de pruebas según sea necesario.
-- **Automatización de pruebas**. Por último, el tener la capacidad para automatizar los tests mejorará la eficiencia y consistencia del proceso.
+- **Mantenimiento y actualizaciones regulares**. Las herramientas deben recibir actualizaciones y mantenimiento regulares para garantizar que no quedan obsoletas. Por ello, también convendría ser una herramienta lo suficientemente popular y usada como para tener una comunidad activa detrás para que se encuentre en continuo desarrollo.
+
+- **Rendimiento de aserciones y pruebas**. Deben permitir la creación de aserciones rápidas, eficientes y flexibles. La herramienta en cuestión deberá otorgar la posibilidad de lanzar tests relacionados con cada función del código.
+
+- **Simplicidad en la generación y consulta de informes y resultados**. La herramienta elegida será ideal si los informes correspondientes a las pruebas ejecutadas resultan ser simples de interpretar y comprobar. Si falla algún test realizado, debería generar la suficiente información como para saber qué se necesitaría cambiar en relación con la funcionalidad testeada, sin tener que hacer una búsqueda exhaustiva del error en todo el código proporcionado. 
+
+- **Soporte para diversos tipos de pruebas**. Deben ser versátiles para soportar diferentes tipos de pruebas según sea necesario. Dicho de otra forma, la biblioteca de aserciones debe ser completa en cuanto a pruebas, ofreciendo diferentes maneras de comprobar y analizar el código escrito.
 
 ## Listado de herramientas para la elección
 Considerando estos criterios, se evalúan múltiples opciones.
@@ -34,6 +36,6 @@ En Go, las aserciones [no forman parte del estándar](https://stackoverflow.com/
 ​- [**GoConvey**](https://github.com/smartystreets/goconvey). También mencionado en la [Awesome Go](https://awesome-go.com/testing/), y se trata de un framework de pruebas BDD con una interfaz web para visualizar todas las pruebas en tiempo real.
 
 ## Decisión
-Desde mi punto de vista, la combinación de Testify y el módulo test de Go representa una solución robusta y coherente para las pruebas durante el desarrollo de este proyecto. Tanto Testify como `go test` garantizan una ejecución de tests eficiente y bien integrada con el ecosistema de Go. 
+Personalmente, la combinación de Testify y el módulo test de Go representa una solución robusta y coherente para las pruebas durante el desarrollo de este proyecto. Haciendo mención a los criterios establecidos, Testify resulta ser una de las herramientas más [populares](https://trends.google.com/trends/explore?date=today%205-y&q=golang%20testify,golang%20goconvey,golang%20ginkgo,golang%20httpexpect,golang%20gomega). Esto, y la extensa comunidad que tiene detrás, hace que se permanezca al día en cuanto a nivel de mantenimiento se refiere. Por otra parte, Testify ofrece también una amplia gama de aserciones para realizar pruebas de forma más exhaustiva, aspecto que se ha comprobado consultando la [documentación oficial](https://pkg.go.dev/github.com/stretchr/testify/assert) de la biblioteca. 
 
-Esta elección ofrece simplicidad necesaria para garantizar las mejores prácticas de este lenguaje, asegurando un proceso de testing que es tanto eficiente como efectivo. La integración de estas herramientas con el entorno de desarrollo y su configuración sencilla cumplen con los criterios establecidos para la selección de herramientas.
+Por último, esta elección ofrece simplicidad necesaria para garantizar las mejores prácticas de este lenguaje, asegurando un proceso de testing que es tanto eficiente como efectivo. La integración de estas herramientas con el entorno de desarrollo y su [configuración sencilla](https://github.com/stretchr/testify?tab=readme-ov-file#installation) cumplen con los criterios establecidos para la selección de herramientas.
