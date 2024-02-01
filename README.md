@@ -23,7 +23,7 @@ Para automatizar las tareas se utiliza **Task**. [Aquí](https://github.com/john
 - `task build`: compila el proyecto.
 
 ## Progreso del proyecto
-Se ha avanzado hasta el [Objetivo 4](http://jj.github.io/IV/documentos/proyecto/4.Tests) de la asignatura.
+Se ha avanzado hasta el [Objetivo 5](http://jj.github.io/IV/documentos/proyecto/5.Docker) de la asignatura.
 
 Las tareas realizadas en objetivos anteriores se pueden consultar accediendo a las diferentes ramas de este repositorio.
 
