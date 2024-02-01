@@ -21,10 +21,13 @@ Para automatizar las tareas se utiliza **Task**. [Aquí](https://github.com/john
 - `task updatedeps`: actualiza las dependencias instaladas.
 - `task check`: comprueba la sintaxis y señala los posibles errores que puedan existir.
 - `task build`: compila el proyecto.
+- `task test`: ejecuta las pruebas unitarias desarrolladas para comprobar la funcionalidad del código implementado en el proyecto.
+
+### Herramienta de pruebas
+**Testify** y **Go Test** son las herramientas elegidas para generar y ejecutar pruebas y excepciones que comprueban la funcionalidad del código implementado. [Aquí](https://github.com/johnwaves/recambios-express/blob/Objetivo-4/docs/herramientas_test.md) se puede consultar más información acerca de los criterios de elección.
 
 ## Progreso del proyecto
 Se ha avanzado hasta el [Objetivo 4](http://jj.github.io/IV/documentos/proyecto/4.Tests) de la asignatura.
-
 Las tareas realizadas en objetivos anteriores se pueden consultar accediendo a las diferentes ramas de este repositorio.
 
 ## Configuración de GitHub
