@@ -19,4 +19,9 @@ tasks:
   check:
     desc: Comprueba la sintaxis del proyecto.
     cmds:
-     - gofmt -e ./pkg/ > /dev/null
+      - gofmt -e ./pkg/ > /dev/null
+     
+  test:
+    desc: Ejecuta los tests del proyecto.
+    cmds:
+      - go test -v ./pkg/
