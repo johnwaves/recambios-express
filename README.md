@@ -40,7 +40,7 @@ docker build -t johnwaves1/recambios-express .
 
 - Para ejecutar el contenedor:
 ```
-`docker run -t -v \`pwd\`:/app/test johnwaves1/recambios-express`
+docker run -t -v `pwd`:/app/test johnwaves1/recambios-express
 ```
 
 ## Progreso del proyecto
