@@ -34,10 +34,14 @@ Para automatizar las tareas se utiliza **Task**. [Aquí](https://github.com/john
 ### Pruebas
 Este proyecto de puede probar en Docker con los siguientes comandos:
 - Para construir el contenedor:
-`docker build -t johnwaves1/recambios-express . `
+```
+docker build -t johnwaves1/recambios-express .
+```
 
 - Para ejecutar el contenedor:
-`docker run -t -v `pwd`:/app/test johnwaves1/recambios-express `
+```
+`docker run -t -v \`pwd\`:/app/test johnwaves1/recambios-express`
+```
 
 ## Progreso del proyecto
 Se ha avanzado hasta el [Objetivo 5](http://jj.github.io/IV/documentos/proyecto/5.Docker) de la asignatura.
