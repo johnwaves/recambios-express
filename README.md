@@ -29,10 +29,10 @@ Para automatizar las tareas se utiliza **Task**. [Aquí](https://github.com/john
 ## Contenedor para pruebas
 
 ### Imagen para el contenedor de pruebas
-**Bitnami** es la imagen seleccionada para la ejecución de los tests unitarios sobre este proyecto. Tanto los criterios seguidos como las demás imágenes candidatas se detallan [aquí](https://github.com/johnwaves/recambios-express/blob/Objetivo-5/docs/eleccion_images.md).
+**Debian (versión slim)** es la imagen seleccionada para la ejecución de los tests unitarios sobre este proyecto. Tanto los criterios seguidos como las demás imágenes candidatas se detallan [aquí](https://github.com/johnwaves/recambios-express/blob/Objetivo-5/docs/eleccion_images.md).
 
 ### Pruebas
-Este proyecto de puede probar en Docker con los siguientes comandos:
+Este proyecto se puede probar en Docker con los siguientes comandos:
 - Para construir el contenedor:
 ```
 docker build -t johnwaves1/recambios-express .
@@ -40,7 +40,7 @@ docker build -t johnwaves1/recambios-express .
 
 - Para ejecutar el contenedor:
 ```
-docker run -t -v `pwd`:/app/test johnwaves1/recambios-express
+docker run -u 1001 -t -v `pwd`:/app/test johnwaves1/recambios-express
 ```
 
 ## Progreso del proyecto
