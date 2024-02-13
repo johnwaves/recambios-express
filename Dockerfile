@@ -14,12 +14,6 @@ COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 RUN adduser -u 1001 test
 USER test
 
-WORKDIR /app
-
-COPY go.mod go.sum ./
-
-RUN go mod download
-
 WORKDIR /app/test
 
 ENTRYPOINT ["task", "test"]
