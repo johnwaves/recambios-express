@@ -20,8 +20,8 @@ Debian y Ubuntu ofrecen un balance entre funcionalidad y rendimiento. Son adecua
 ### [Golang con Alpine](https://hub.docker.com/_/alpine)
 Esta es una de las opciones que ofrece un entorno minimalista y eficiente para desplegar servicios ligeros escritos en Go, dado que incorpora un compilador y algunas herramientas para desarrollar y ejecutar aplicaciones escritas en este lenguaje (como pueden ser `Go fmt`, `Go test` o `Go build`). Pese a disponer de estas ventajas, cabe mencionar que Alpine tiene un repositorio aún creciente y el número de paquetes disponibles es menor en comparación con otras distribuciones más grandes. Esto puede significar que ciertas herramientas o bibliotecas no estén disponibles o requieran una compilación manual.
 
-### [Bitnami](https://hub.docker.com/r/bitnami/golang)
-Bitnami es una de las imágenes que simplifica el proceso de despliegue, pues viene con herramientas preconfiguradas y con actualizaciones muy frecuentes. De hecho, durante la redacción de este documento se ha publicado una actualización y aplicado un nuevo parche de seguridad. Además, el entorno de desarrollo no está cargado con demasiadas herramientas que puedan resultar innecesarias.
+### [Bitnami con Golang](https://hub.docker.com/r/bitnami/golang)
+Bitnami es una de las imágenes que simplifica el proceso de despliegue, pues viene con herramientas preconfiguradas para el entorno Go y con actualizaciones muy frecuentes. De hecho, durante la redacción de este documento se ha publicado una actualización y aplicado un nuevo parche de seguridad. Además, el entorno de desarrollo no está cargado con demasiadas herramientas que puedan resultar innecesarias.
 
 ### [Debian (versión slim)](https://hub.docker.com/_/debian)
 Esta variante de Debian se presenta como ligeramente más pequeña. Ofrece un sistema operativo base, sin herramientas añadidas, pudiendo nosotros instalar lo necesario para el proyecto. En cuanto a mantenimiento, las actualizaciones son constantes y ofrece un grado alto de seguridad. 
@@ -29,4 +29,6 @@ Esta variante de Debian se presenta como ligeramente más pequeña. Ofrece un si
 ## Conclusión 
 Tras evaluar cada una de las opciones disponibles y basando esta conclusión en los criterios establecidos, la imagen que se utilizará para llevar a cabo las pruebas de este proyecto será **Debian en su versión slim**.
 
-Esta supone una opción ideal para el despliegue de pequeños proyectos como es este por su naturaleza minimalista. Es por ello por lo que la instalación de Go se debe hacer manualmente. Como se ha mencionado también, recibe actualizaciones de forma periódica.
+Como se trata de una imagen que no dispone del entorno de desarrollo de Golang, la instalación del mismo y de la propia imagen en el contenedor se realiza en dos fases: construcción e instalación (fase final). En la fase de construcción se prepara el entorno a partir de la imagen oficial de Golang, y se instala `task`. En la fase de instalación se crea la imagen final, Debian (stable-slim) y se copia todo el entorno de Go, pero sin añadir dependencias adicionales. Cabe destacar que es necesario utilizar certificados SSL para poder permitir conexiones seguras cuando se gestionen las dependencias y establecer el PATH para incluir los directorios de los binarios de Go y `task`.
+
+Esto, por tanto, supone una opción ideal para no incluir componentes innecesarios que pueden venir con vulnerabilidades o abundantes puntos débiles. Es por ello por lo que la imagen resultante está optimizada para la producción y el entorno utilizado es uno limpio.
