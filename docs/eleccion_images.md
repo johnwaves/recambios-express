@@ -23,10 +23,10 @@ Esta es una de las opciones que ofrece un entorno minimalista y eficiente para d
 ### [Bitnami](https://hub.docker.com/r/bitnami/golang)
 Bitnami es una de las imágenes que simplifica el proceso de despliegue, pues viene con herramientas preconfiguradas y con actualizaciones muy frecuentes. De hecho, durante la redacción de este documento se ha publicado una actualización y aplicado un nuevo parche de seguridad. Además, el entorno de desarrollo no está cargado con demasiadas herramientas que puedan resultar innecesarias.
 
-### [BusyBox](https://hub.docker.com/_/busybox)
-La imagen de BusyBox se presenta como ligeramente más pequeña que Alpine. Aunque las dos presentan un alto rendimiento y un bajo consumo de recursos, en comparación con la última, BusyBox proporciona un historial sin apenas vulnerabilidades, lo que la convierte en una opción segura para el despliegue de proyectos.
+### [Debian (versión slim)](https://hub.docker.com/_/debian)
+Esta variante de Debian se presenta como ligeramente más pequeña. Ofrece un sistema operativo base, sin herramientas añadidas, pudiendo nosotros instalar lo necesario para el proyecto. En cuanto a mantenimiento, las actualizaciones son constantes y ofrece un grado alto de seguridad. 
 
 ## Conclusión 
-Tras evaluar cada una de las opciones disponibles y basando esta conclusión en los criterios establecidos, la imagen que se utilizará para llevar a cabo las pruebas de este proyecto será **BusyBox**.
+Tras evaluar cada una de las opciones disponibles y basando esta conclusión en los criterios establecidos, la imagen que se utilizará para llevar a cabo las pruebas de este proyecto será **Debian en su versión slim**.
 
-Aunque no es la imagen más ligera, BusyBox supone una opción ideal para el despliegue de pequeños proyectos como es este por su naturaleza minimalista. Es por ello por lo que la instalación de Go se debe hacer manualmente. Sin embargo, otros aspectos destacados son la periodicidad de sus actualizaciones y la compatibilidad con Go y la seguridad ofrecida por la ausencia de vulnerabilidades.
+Esta supone una opción ideal para el despliegue de pequeños proyectos como es este por su naturaleza minimalista. Es por ello por lo que la instalación de Go se debe hacer manualmente. Como se ha mencionado también, recibe actualizaciones de forma periódica.
