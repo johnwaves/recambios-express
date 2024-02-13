@@ -23,7 +23,10 @@ Esta es una de las opciones que ofrece un entorno minimalista y eficiente para d
 ### [Bitnami](https://hub.docker.com/r/bitnami/golang)
 Bitnami es una de las imágenes que simplifica el proceso de despliegue, pues viene con herramientas preconfiguradas y con actualizaciones muy frecuentes. De hecho, durante la redacción de este documento se ha publicado una actualización y aplicado un nuevo parche de seguridad. Además, el entorno de desarrollo no está cargado con demasiadas herramientas que puedan resultar innecesarias.
 
-## Conclusión 
-Tras evaluar cada una de las opciones disponibles y basando esta conclusión en los criterios establecidos, la imagen que se utilizará para llevar a cabo las pruebas de este proyecto será **Bitnami**.
+### [BusyBox](https://hub.docker.com/_/busybox)
+La imagen de BusyBox se presenta como ligeramente más pequeña que Alpine. Aunque las dos presentan un alto rendimiento y un bajo consumo de recursos, en comparación con la última, BusyBox proporciona un historial sin apenas vulnerabilidades, lo que la convierte en una opción segura para el despliegue de proyectos.
 
-Aunque no es más ligera en comparación con Alpine, Bitnami sigue siendo más eficiente que las opciones de Ubuntu o Debian en cuanto a preconfiguraciones y tamaño, dado que el entorno de desarrollo que proporciona no está sobrecargado y la simplicidad que esto garantiza hace que sea lo suficientemente liviana para un despliegue ágil. Por último, otros aspectos destacados son la periodicidad de las actualizaciones y la compatibilidad con Go, puesto que viene con las herramientas necesarias preinstaladas y actualizadas muy frecuentemente.
+## Conclusión 
+Tras evaluar cada una de las opciones disponibles y basando esta conclusión en los criterios establecidos, la imagen que se utilizará para llevar a cabo las pruebas de este proyecto será **BusyBox**.
+
+Aunque no es la imagen más ligera, BusyBox supone una opción ideal para el despliegue de pequeños proyectos como es este por su naturaleza minimalista. Es por ello por lo que la instalación de Go se debe hacer manualmente. Sin embargo, otros aspectos destacados son la periodicidad de sus actualizaciones y la compatibilidad con Go y la seguridad ofrecida por la ausencia de vulnerabilidades.
