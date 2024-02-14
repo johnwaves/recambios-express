@@ -11,9 +11,14 @@ ENV PATH="/usr/local/go/bin:/usr/local/bin:${PATH}"
 
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
-RUN adduser -u 1001 test
+RUN mkdir /app /cache && chmod -R 777 /cache
+ENV GOCACHE=/cache
+ENV GOPATH=/cache
+
+RUN adduser test
 USER test
 
 WORKDIR /app/test
 
 ENTRYPOINT ["task", "test"]
+
