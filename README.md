@@ -26,8 +26,25 @@ Para automatizar las tareas se utiliza **Task**. [Aquí](https://github.com/john
 ### Herramienta de pruebas
 **Testify** y **Go Test** son las herramientas elegidas para generar y ejecutar pruebas y excepciones que comprueban la funcionalidad del código implementado. [Aquí](https://github.com/johnwaves/recambios-express/blob/Objetivo-4/docs/herramientas_test.md) se puede consultar más información acerca de los criterios de elección.
 
+## Contenedor para pruebas
+
+### Imagen para el contenedor de pruebas
+**Debian (versión slim)** es la imagen seleccionada para la ejecución de los tests unitarios sobre este proyecto. Tanto los criterios seguidos como las demás imágenes candidatas se detallan [aquí](https://github.com/johnwaves/recambios-express/blob/Objetivo-5/docs/eleccion_images.md).
+
+### Pruebas
+Este proyecto se puede probar en Docker con los siguientes comandos:
+- Para construir el contenedor:
+```
+docker build -t johnwaves1/recambios-express .
+```
+
+- Para ejecutar el contenedor:
+```
+docker run -u 1001 -t -v `pwd`:/app/test johnwaves1/recambios-express
+```
+
 ## Progreso del proyecto
-Se ha avanzado hasta el [Objetivo 4](http://jj.github.io/IV/documentos/proyecto/4.Tests) de la asignatura.
+Se ha avanzado hasta el [Objetivo 5](http://jj.github.io/IV/documentos/proyecto/5.Docker) de la asignatura.
 Las tareas realizadas en objetivos anteriores se pueden consultar accediendo a las diferentes ramas de este repositorio.
 
 ## Configuración de GitHub
